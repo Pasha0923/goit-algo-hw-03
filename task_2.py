@@ -11,8 +11,8 @@ def get_numbers_ticket(min, max, quantity):
             raise ValueError("❌ мінімальне число має бути менше максимального!")
         if quantity > (max - min + 1):
             raise ValueError("❌кількість чисел переважає максимальний діапазон!")
-        if max > 49:
-            raise ValueError("❌ максимальне число не може бути більше 49!")
+        if max > 1000:
+            raise ValueError("❌ максимальне число не може бути більше 1000!")
         if min < 1:
             raise ValueError("❌ мінімальне число не може бути менше 1")
     except ValueError as error:
@@ -27,5 +27,5 @@ def get_numbers_ticket(min, max, quantity):
 
     return randoms_list_sorted
 
-lottery_numbers = get_numbers_ticket(1, 49, 6 )
+lottery_numbers = get_numbers_ticket(1, 36, 37 )
 print("Ваші лотерейні числа:", lottery_numbers) # [3, 15, 22, 28, 34, 45] 
